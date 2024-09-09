@@ -30,7 +30,7 @@ showMyDB();
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
-        const lastMovie = prompt("Один з останніх фільмів які ви передивились?", "");
+        const lastMovie = prompt("Один з останніх фільмів які ви передивились?", "").trim();
         const lastMovieRating = +prompt("На скільки оцінити його?", "");
         if (lastMovie != null && lastMovieRating != null && lastMovie != '' && lastMovieRating != '' && lastMovie.length < 50) {
         personalMovieDB.movies[lastMovie] = lastMovieRating;
